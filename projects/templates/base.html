@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            
+            position:fixed;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            padding: 25px 30px;
+            top: 0;
+            margin: auto;   
+            transition: 0.7s;
+            color: rgb(38, 109, 195);
+            z-index: 10;
+           
+            
+        }
+
+        .menu.abajo{
+        padding: 15px 20px;
+        background: white;
+        
+        }
+
+
+
+        
+        .menu .logo{
+            color:rgb(255, 255, 255);
+            position:relative;
+            text-decoration: none;
+            font-weight:bold;
+            font-family: Arial;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+          
+
+        }
+
+        .menu ul{
+            position: relative;
+            display: flex;
+        }
+
+        .menu ul li{
+            position: relative;
+            display:inline-block;
+            align-items: center;
+
+            font-weight:bold;
+            font-family: Arial;
+            font-size: 1em;
+            margin: 0 15px;
+            text-decoration: none;
+            color:white;
+        
+            letter-spacing: 2px;
+            transition: 0.7s;
+        }
+
+        .menu.abajo ul li, .menu.abajo .logo{
+            color: rgb(38, 109, 195);
+        }
+
+
+        .menu .logo:hover{
+            color:rgb(255, 255, 255);
+            transition: 0.3s;
+            font-size: 1.5em;
+            
+        }
+
+        .menu.abajo ul li:hover, .menu.abajo .logo:hover{
+            color:rgb(60, 91, 165);
+            
+        }
+
+        .menu ul li:hover{
+            color: rgb(255, 255, 255);
+            transition: 0.3s;
+            font-size: 1.2rem;
+            
+        }
+
+        .menu .logo::before, .menu ul li::before{
+            content: "";
+            position: absolute;
+         
+            width: 0%;
+            height: 3px;
+            left: 0;
+            bottom: -30px;
+            transition: 0.8s;
+            
+        }
+
+        .menu .logo:hover::before, .menu ul li:hover::before{
+            width: 100%;
+           
+        }
+
+        body{
+         
+        position:absolute;
+        width: 100%;
+        height: 100vh;
+        background-image: url(https://miro.medium.com/max/1400/1*FPbYxNtCdlwYd2je0pVrgQ.png);
+        background-size: cover;
+            
+          
+        }
+
+        .container{
+            margin-top: 80px;
+            margin: 0px 0px;
+        }
+
+        .container h1{
+            text-align: center;
+            font-family:Helvetica;
+            font-size: 4em;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;    
+        }
+
+
+    .container .seccion1{
+       background: rgb(60, 130, 210);
+       width: 70%;
+       height: 500px;
+       opacity: 0.2;
+       border-radius: 100px;
+       
+    }
+
+    .container .seccion2{
+        position: relative;
+        margin-top: 250px;
+        background: rgb(248, 245, 245, .4);
+        margin-left: 80px;
+        width: 90%;
+        height: 350px;
+        border-radius: 150px;
+        z-index: -12;
+    }
+
+    .container .seccion2 h1{
+        margin-top: 30px;
+        z-index: 10px;
+    }
+
+    .container .seccion2 h3{
+        margin-top: 80px;
+        
+        color: white;
+        font-size: 2em;
+        text-align: justify;
+        margin-left:    50px;
+        margin-right: 50px;
+        opacity: 1;
+    }
+
+    .container .seccion2 .botones{
+        margin-top: 150px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container .seccion2 .btn1{
+        font-size: 2em;
+        margin: 10px 10px;
+        background: rgb(227, 230, 234);
+        padding: 10px 10px;
+        color: rgba(62, 86, 225, 0.886);
+        border-radius: 50px;
+        font-family:Helvetica;
+        font-weight: bold;
+        border: none;
+        z-index: 10px;
+    }
+
+    .container .seccion2 .btn2{
+        font-size: 2em;
+        margin: 10px 10px;
+        background: black;
+        padding: 10px 30px;
+        color: white;
+        border-radius: 50px;
+        border: none;
+        transition: 0.2s;
+    }
+
+    .container .seccion2 .btn2:hover{
+        background: white;
+    }
+
+   .container .seccion3{
+    margin-top: 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: white;
+    width: 100%;
+    height: 600px;
+   }
+
+   .container .seccion4{
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: rgb(10, 119, 220);
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    z-index: 1;
+   }
+
+   .container .seccion4 h1{
+    margin-top: 10px;
+    z-index: 12px;
+    color: rgb(255, 255, 255);
+   }
+
+
+   .container .seccion5{
+    width: 100%;
+    height: 300px;
+    background: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+   
+   }
+
+  
+
+   .container .seccion5 .card{
+    color: white;
+    margin: 50px 50px;
+   }
+   .container .seccion5 .card h2{
+    font-weight: bold;
+    font-size: 2em;
+   }
+   .container .seccion5 .card ul li{
+    list-style: none;
+    margin: 5px 0px;
+    font-weight: bold;
+    font-size: 1.5em;
+   }
+
+    </style>
+
+</head>
+<body>
+    <div class="menu">
+        <a class="logo" href="#">Oasis Network</a>
+        <ul>
+            <li> <a class= "item" href="#"></a>Learn</li>
+            <li> <a href="#"></a>Build</li>
+            <li> <a href="#"></a>Network</li>
+            <li> <a href="#"></a>Community</li>
+        </ul>
+    </div>
+
+    <div class="container">
+       <div class="seccion1">
+
+       </div>
+
+       <div class="seccion2">
+        <h1>Powerful for developers.
+            Fast for everyone.</h1>
+
+      
+        <div class="botones">
+            <button class="btn1">Start building</button>
+            <button class="btn2">read docs</button>
+        </div>
+
+        
+       </div>
+
+       
+       <div class="seccion4">
+        <h1>Parataims</h1>
+       </div>
+
+       <div class="seccion3">
+        <img src="https://miro.medium.com/max/1600/0*EURKPK0Qv3WCfPxw" alt="">
+       </div>
+       
+       <div class="seccion5">
+        <h1>Footer</h1>
+        <div class="card">
+            <h2>Resources</h2>
+            <ul>
+                <li>
+                    aplications
+                </li>
+
+                <li>
+                    aplications
+                </li>
+
+                <li>
+                    aplications
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Teams</h2>
+            <ul>
+                <li>
+                    aplications
+                </li>
+
+                <li>
+                    aplications
+                </li>
+
+                <li>
+                    aplications
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Company</h2>
+            <ul>
+                <li>
+                    aplications
+                </li>
+
+                <li>
+                    aplications
+                </li>
+
+                <li>
+                    aplications
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Social</h2>
+            <ul>
+                <li>
+                    aplications
+                </li>
+
+                <li>
+                    aplications
+                </li>
+
+                <li>
+                    aplications
+                </li>
+            </ul>
+        </div>
+       </div>
+  
+    </div>
+
+    
+    <script>
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector(".menu");
+            header.classList.toggle("abajo", window.scrollY > 0);
+        })
+    </script>
+</body>
+</html>
